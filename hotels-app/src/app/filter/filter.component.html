@@ -1,0 +1,53 @@
+<div class="side-nav-container">
+  <!--mat-toolbar class="fonts-in white-bg">Filtros</mat-toolbar-->
+  <mat-accordion hideToggle="{{innerWidth > 959}}">
+    <mat-expansion-panel class="expansion-container" expanded="{{innerWidth > 959}}" disabled="{{innerWidth > 959}}">
+      <mat-expansion-panel-header class="fonts-in white-bg">
+        Filtros
+      </mat-expansion-panel-header>
+      <mat-divider class="divider"></mat-divider>
+      <mat-accordion>
+          <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header class="expansion-blue-arrow">
+              <mat-panel-title>
+                  <mat-icon class="search-icon"></mat-icon>
+                  <span class="search-title color-blue">Nombre de hotel</span>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <mat-form-field class="font-10" fxFlex="60%" fxLayout="column">
+                <input matInput placeholder="Ingrese nombre" [(ngModel)]="hotelName">
+              </mat-form-field>
+              <button fxFlex="40%" fxLayout="column" mat-raised-button color="primary" class="search-button" (click)="filterByName(hotelName)">Aceptar</button>
+            </div>
+          </mat-expansion-panel>
+      </mat-accordion>
+
+      <mat-divider class="divider"></mat-divider>
+      
+      <mat-accordion>
+          <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header class="expansion-blue-arrow">
+              <mat-panel-title>
+                  <mat-icon class="search-icon"></mat-icon>
+                  <span class="search-title color-blue">Estrellas</span>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-list role="list" class="mat-list-checks">
+              <mat-list-item role="listitem" *ngFor="let stars of [0,5,4,3,2,1]; let i = index" [ngClass]="{'bold-text-14':i==0}">
+                <mat-checkbox [(ngModel)]="checkBoxes[i]" [checked]="selected === i" (change)="selected = i; filterByStars(stars)" [value]="i+1">
+                  <span *ngIf="i == 0">
+                    Todas las estrellas
+                  </span>
+                  <span *ngIf="i != 0" class="stars-filter-span">
+                    <mat-icon class="star-icon-yellow" *ngFor="let star of ArrStars(stars).fill(1)"></mat-icon>
+                  </span>
+                </mat-checkbox>
+              </mat-list-item>
+            </mat-list>
+
+          </mat-expansion-panel>
+      </mat-accordion>  
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

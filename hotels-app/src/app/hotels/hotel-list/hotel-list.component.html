@@ -1,0 +1,47 @@
+<mat-sidenav-container class="center-nav-container">
+        <div 
+            class="container hotel-card" 
+            fxLayout="row" 
+            fxLayour.xs="column" 
+            fxLayoutWrap 
+            fxLayoutGap="0.5%" 
+            *ngFor="let hotel of hotels">
+            
+            <div fxFlex="30%" fxLayout="column" *ngIf="hotel">
+                <img alt="{{hotel.name}}" (error)="updateImgUrl($event)" class="mat-card-image-desktop" src="assets/images/hotels/{{hotel.image}}">
+            </div>
+            <div fxFlex="40%" fxLayout="column" style="padding-left: 1%" *ngIf="hotel">
+                <mat-list role="list">
+                    <mat-list-item role="listitem" class="hotel-detail">
+                        {{hotel.name}}
+                    </mat-list-item>
+                    <mat-list-item role="listitem" class="hotel-detail">
+                        <span *ngFor="let star of ArrStars(hotel.stars).fill(1)">
+                            <mat-icon class="star-icon-yellow"></mat-icon>
+                        </span>
+                    </mat-list-item>
+                    <mat-list-item role="listitem" class="hotel-detail">
+                        <img alt="{{amenity}}" *ngFor="let amenity of hotel.amenities; let ind = index" class="width-5" [ngClass]="{'amenity-icon' : ind > 0}" src="assets/icons/amenities/{{amenity}}.svg">
+                    </mat-list-item>
+                </mat-list>
+            </div>
+            <div fxFlex="30%" fxLayout="column" fxLayoutAlign="center center" class="third-column-card" *ngIf="hotel">
+                <mat-list>
+                    <mat-list-item style="font-size: 12px" fxLayoutAlign="center" class="mat-list-precio-text">
+                        Precio por noche por habitaci&oacute;n
+                    </mat-list-item>
+                    <mat-list-item fxLayoutAlign="center" class="mat-list-precio">
+                        <span style="font-size: 14px">
+                            ARS
+                        </span>
+                        <span style="font-size: 16px;padding-left:5px">
+                            {{hotel.price}}
+                        </span>
+                    </mat-list-item>
+                    <mat-list-item fxLayoutAlign="center">
+                        <button mat-raised-button color="primary">Ver hotel</button>
+                    </mat-list-item>
+                </mat-list>
+            </div>
+        </div>
+</mat-sidenav-container>

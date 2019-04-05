@@ -1,0 +1,81 @@
+.side-nav-container {
+    width: 20%;
+    margin: 1%;
+    background: rgb(253, 253, 253);
+    float:left;
+    flex-direction: column;
+}
+.divider {
+    color: lightgray;
+    border-top-width: 3px;
+}
+.mat-expansion-panel .fonts-in {
+    color: rgba(0,0,0,.87);
+    font-weight: bold;
+}
+
+.search-name {
+    color:blue;
+}
+.search-icon{
+    height: 1em;
+    width: 1em;
+    background-color: blue;
+    -webkit-mask-image: url('../../assets/icons/filters/search.svg');
+    mask-image: url('../../assets/icons/filters/search.svg');
+    mask-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.search-title {
+    padding-left: 10px;
+    font-weight: bold;
+}
+.color-blue {
+    color:blue;
+}
+::ng-deep .expansion-blue-arrow > .mat-expansion-indicator:after {
+    color: blue;
+}
+.font-10 .mat-form-field-label {
+    font-size: 10px;
+}
+.search-button {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    align-items: center;
+    margin-left: 10px;
+}
+.white-bg {
+    background-color: white;
+}
+.bold-text-14 {
+    font-size: 14px;
+    font-weight: bold;
+}
+.star-icon-yellow {
+    height: 1em;
+    width: 1em;
+    background-color: #b7b713;
+    -webkit-mask-image: url('../../assets/icons/filters/star.svg');
+    mask-image: url('../../assets/icons/filters/star.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.stars-filter-span {
+    vertical-align: -webkit-baseline-middle;
+    margin-left: 8px;
+}
+@media screen and (max-width: 959px) {
+    .side-nav-container {
+        width: 20%;
+        margin: 1%;
+        background: rgb(253, 253, 253);
+        float:left;
+        flex-direction: row;
+        box-sizing: border-box;
+        display: contents;
+    }
+}

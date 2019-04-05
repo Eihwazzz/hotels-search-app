@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: #efecec;
+}
+.mat-drawer-content {
+    overflow: hidden !important;
+}
+.mat-list-precio-text .mat-list-item-content{
+    width: 70%;
+    text-align: center;
+}
+.mat-list-precio .mat-list-item-content {
+    max-height: 20px;
+}
+.mat-list-checks .mat-list-item-content {
+    padding-left: 0 !important;
+}

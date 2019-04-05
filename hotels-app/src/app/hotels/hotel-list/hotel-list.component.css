@@ -1,0 +1,60 @@
+.center-nav-container {
+    margin: 1%;
+    /*background: rgb(253, 253, 253);*/
+    background-color: #efecec;
+    flex-direction: column;
+}
+.mat-list-precio {
+    max-height: 20px;
+    color:orange;
+    font-weight: bold;
+}
+.hotel-card{
+    max-height: 200px;
+    margin-bottom: 15px;
+    background-color: white;
+}
+.mat-card-image-desktop {
+    position: relative;
+    float: left;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95%;
+    max-height: 200px;
+    width: 100%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.hotel-detail {
+    height: 30px !important;
+}
+.star-icon-yellow {
+    height: 1em;
+    width: 1em;
+    background-color: #b7b713;
+    -webkit-mask-image: url('../../../assets/icons/filters/star.svg');
+    mask-image: url('../../../assets/icons/filters/star.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.width-5 {
+    width: 5%;
+}
+.amenity-icon {
+    margin-left: 10px;
+}
+.third-column-card {
+    border-left: 1px dotted black;
+    margin: 1%;
+}
+@media screen and (max-width: 959px) {
+    .side-nav-container {
+        width: 20%;
+        margin: 1%;
+        background: rgb(253, 253, 253);
+        float:left;
+        flex-direction: row;
+    }
+}
