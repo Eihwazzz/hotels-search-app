@@ -1,18 +1,17 @@
 <mat-sidenav-container class="center-nav-container">
         <div 
-            class="container hotel-card" 
-            fxLayout="row" 
-            fxLayour.xs="column" 
-            fxLayoutWrap 
+            class="container hotel-card mobile-resize" 
+            fxLayout="row" fxLayout.xs="column"
+            
             fxLayoutGap="0.5%" 
             *ngFor="let hotel of hotels">
             
-            <div fxFlex="30%" fxLayout="column" *ngIf="hotel">
+            <div fxFlex="30%" fxFlex.xs="100%" *ngIf="hotel">
                 <img alt="{{hotel.name}}" (error)="updateImgUrl($event)" class="mat-card-image-desktop" src="assets/images/hotels/{{hotel.image}}">
             </div>
-            <div fxFlex="40%" fxLayout="column" style="padding-left: 1%" *ngIf="hotel">
+            <div fxFlex="40%" fxFlex.xs="100%" fxLayoutAlign.xs="center center" style="padding-left: 1%" *ngIf="hotel">
                 <mat-list role="list">
-                    <mat-list-item role="listitem" class="hotel-detail">
+                    <mat-list-item role="listitem" class="hotel-detail hotel-name">
                         {{hotel.name}}
                     </mat-list-item>
                     <mat-list-item role="listitem" class="hotel-detail">
@@ -25,7 +24,7 @@
                     </mat-list-item>
                 </mat-list>
             </div>
-            <div fxFlex="30%" fxLayout="column" fxLayoutAlign="center center" class="third-column-card" *ngIf="hotel">
+            <div fxFlex="30%" fxFlex.xs="100%" fxLayoutAlign="center center" class="third-column-card" *ngIf="hotel">
                 <mat-list>
                     <mat-list-item style="font-size: 12px" fxLayoutAlign="center" class="mat-list-precio-text">
                         Precio por noche por habitaci&oacute;n

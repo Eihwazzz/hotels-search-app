@@ -9,6 +9,8 @@ var data = jsonData.getData();
 app.use(cors());
 app.options('*', cors());
 
+
+//get para obtener listado completo de hoteles, y con 2 variaciones de parametros para filtrar
 app.get('/api/hotels', (req, res) => {
 	if(data && data != 'FNF' && data != 'ERROR'){
 		var dataParsed = JSON.parse(data);

@@ -2,7 +2,6 @@
     margin: 1%;
     /*background: rgb(253, 253, 253);*/
     background-color: #efecec;
-    flex-direction: column;
 }
 .mat-list-precio {
     max-height: 20px;
@@ -10,7 +9,6 @@
     font-weight: bold;
 }
 .hotel-card{
-    max-height: 200px;
     margin-bottom: 15px;
     background-color: white;
 }
@@ -49,12 +47,14 @@
     border-left: 1px dotted black;
     margin: 1%;
 }
-@media screen and (max-width: 959px) {
-    .side-nav-container {
-        width: 20%;
-        margin: 1%;
-        background: rgb(253, 253, 253);
-        float:left;
-        flex-direction: row;
+.hotel-name {
+    font-weight: bold;
+    color:blue !important;
+}
+@media screen and (max-width: 1010px) {
+    .hotel-card{
+        
+        margin-bottom: 15px;
+        background-color: white;
     }
 }

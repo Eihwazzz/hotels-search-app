@@ -1,5 +1,5 @@
 .side-nav-container {
-    width: 20%;
+    width: 27%;
     margin: 1%;
     background: rgb(253, 253, 253);
     float:left;
@@ -68,7 +68,7 @@
     vertical-align: -webkit-baseline-middle;
     margin-left: 8px;
 }
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 1010px) {
     .side-nav-container {
         width: 20%;
         margin: 1%;
@@ -77,5 +77,10 @@
         flex-direction: row;
         box-sizing: border-box;
         display: contents;
+    }
+}
+@media screen and (max-width: 600px) {
+    .mat-expansion-panel .fonts-in {
+        color: blue;
     }
 }
