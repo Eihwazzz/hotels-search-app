@@ -1,12 +1,12 @@
 <mat-sidenav-container class="center-nav-container">
         <div 
-            class="container hotel-card mobile-resize" 
+            class="container hotel-card" 
             fxLayout="row" fxLayout.xs="column"
             
             fxLayoutGap="0.5%" 
             *ngFor="let hotel of hotels">
             
-            <div fxFlex="30%" fxFlex.xs="100%" *ngIf="hotel">
+            <div fxFlex="30%" fxFlex.xs="100%" *ngIf="hotel" class="hotel-img-parent">
                 <img alt="{{hotel.name}}" (error)="updateImgUrl($event)" class="mat-card-image-desktop" src="assets/images/hotels/{{hotel.image}}">
             </div>
             <div fxFlex="40%" fxFlex.xs="100%" fxLayoutAlign.xs="center center" style="padding-left: 1%" *ngIf="hotel">
@@ -25,7 +25,7 @@
                 </mat-list>
             </div>
             <div fxFlex="30%" fxFlex.xs="100%" fxLayoutAlign="center center" class="third-column-card" *ngIf="hotel">
-                <mat-list>
+                <mat-list fxFlex.xs="100%">
                     <mat-list-item style="font-size: 12px" fxLayoutAlign="center" class="mat-list-precio-text">
                         Precio por noche por habitaci&oacute;n
                     </mat-list-item>
@@ -37,8 +37,8 @@
                             {{hotel.price}}
                         </span>
                     </mat-list-item>
-                    <mat-list-item fxLayoutAlign="center">
-                        <button mat-raised-button color="primary">Ver hotel</button>
+                    <mat-list-item class="full-width" fxLayoutAlign="center">
+                        <button fxFlex.xs="100%" [ngStyle]="{'background-color': 'rgb(63, 81, 181)', 'color':'white'}" disabled mat-raised-button color="primary">Ver hotel</button>
                     </mat-list-item>
                 </mat-list>
             </div>

@@ -53,8 +53,28 @@
 }
 @media screen and (max-width: 1010px) {
     .hotel-card{
-        
         margin-bottom: 15px;
         background-color: white;
+    }
+}
+@media screen and (max-width: 600px) {
+    .third-column-card {
+        border-top: 1px dotted black;
+        border-left: none;
+    }
+    .full-width ::ng-deep .mat-list-item-content {
+        width: 100%;
+        padding: 0 !important;
+    }
+    .mat-card-image-desktop {
+        width: 96%;
+    }
+    .hotel-img-parent {
+        align-self: center;
+    }
+}
+@media screen and (max-width: 400px) {
+    .mat-card-image-desktop {
+        max-height: 170px;
     }
 }

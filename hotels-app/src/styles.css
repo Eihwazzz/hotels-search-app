@@ -15,10 +15,16 @@ body {
 .mat-list-precio-text .mat-list-item-content{
     width: 70%;
     text-align: center;
+    justify-content: center;
 }
 .mat-list-precio .mat-list-item-content {
     max-height: 20px;
 }
 .mat-list-checks .mat-list-item-content {
     padding-left: 0 !important;
+}
+@media screen and (max-width: 600px) {
+    .mat-list-precio .mat-list-item-content span {
+        font-size: 20px !important;
+    }
 }
