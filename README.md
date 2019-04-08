@@ -21,17 +21,9 @@ El listado de hoteles muestra por ejemplo cuantas estrellas tiene cada hotel, su
 
 
 Para utilizar la aplicación se requiere tener levantada la Api de Node JS (https://github.com/Eihwazzz/hotels-api.git).
-Se requiere tener instalado Angular CLI. Para instalar via npm se deberá tener instalado Node JS y ejecutar el comando 'npm install -g @angular/cli' para instalarlo a nivel global.
-
-
-Utiliza el comando 'ng serve' dentro de la carpeta del proyecto para iniciar la aplicación en modo desarrollo.
-Navega a 'http://localhost:4200/' para visualizar la aplicación
-
-
-## Build
 
 Aclaración: la carpeta dist, al igual que otros archivos, no son excluidos (utilizando .gitignore) por motivo de la entrega.
 
 
-Para correr la aplicación con el código productivo, se debe estar dentro del path /hotels-app y correr el comando 'node server'
+Para correr la aplicación con el código productivo, se debe estar dentro del path /hotels-app y correr el comando 'node server', luego ingresar a la url 'http://localhost:3002/'.
 
