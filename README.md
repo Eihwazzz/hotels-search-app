@@ -33,5 +33,5 @@ Navega a 'http://localhost:4200/' para visualizar la aplicación
 Aclaración: la carpeta dist, al igual que otros archivos, no son excluidos (utilizando .gitignore) por motivo de la entrega.
 
 
-Para correr la aplicación con el código productivo, se debe estar dentro del path /hotels-app y correr el comando 'node index'
+Para correr la aplicación con el código productivo, se debe estar dentro del path /hotels-app y correr el comando 'node server'
 
