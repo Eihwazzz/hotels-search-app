@@ -30,6 +30,8 @@ Navega a 'http://localhost:4200/' para visualizar la aplicación
 
 ## Build
 
+Aclaración: la carpeta dist, al igual que otros archivos, no son excluidos por motivo de la entrega.
+
 Utiliza el comando 'ng build' para compilar el proyecto. Se creará una carpeta 'dist/'. 
 Para compilar en modo productivo utiliza el flag --prod (ng build --prod).
 El código sera minificado y en cierto modo ofuscado.
