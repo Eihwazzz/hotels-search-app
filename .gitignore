@@ -7,6 +7,9 @@
 # Only exists if Bazel was run
 /bazel-out
 
+# Environment config - debe ser ignorada en casos reales
+# .env
+
 # dependencies
 /hotels-app/node_modules
 /hotels-api/node_modules
