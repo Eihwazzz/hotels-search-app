@@ -1,3 +1,6 @@
+Las 2 aplicaciones se suben por separado para que la api pueda ser reutilizable por otra aplicación.
+
+
 # hotels-api
 
 Rest Api para filtro y listado de Hoteles.
